@@ -5,14 +5,14 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+   
       <HashRouter>
   <Routes>
     <Route path="/" element={<SurveyForm />} />
     <Route path="/admin" element={<Admin />} />
   </Routes>
 </HashRouter>
-    </BrowserRouter>
+    
   );
 }
 
