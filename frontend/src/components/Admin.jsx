@@ -11,8 +11,8 @@ function Admin() {
   const fetchResponses = async () => {
     try {
       const res = await axios.get(
-        "${process.env.REACT_APP_API_URL}/api/survey/responses"
-      );
+  `${process.env.REACT_APP_API_URL}/api/survey/responses`
+);
 
       setResponses(res.data);
     } catch (error) {
