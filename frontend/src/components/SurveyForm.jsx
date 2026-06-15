@@ -79,11 +79,10 @@ function SurveyForm() {
 
   const handleSubmit = async () => {
   try {
-  axios.post(
-  `${process.env.REACT_APP_API_URL}/api/survey/submit`,
+await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/survey/submit`,
   formData
 );
-
     alert("Survey Submitted Successfully!");
 
     console.log(formData);
