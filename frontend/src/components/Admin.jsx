@@ -11,7 +11,7 @@ function Admin() {
   const fetchResponses = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/survey/responses"
+        "${process.env.REACT_APP_API_URL}/api/survey/responses"
       );
 
       setResponses(res.data);
@@ -26,7 +26,7 @@ function Admin() {
         <h2>Survey Responses</h2>
 
         <a
-          href="http://localhost:5000/api/survey/export"
+          href={`${import.meta.env.VITE_API_URL}/api/survey/export`}
           className="btn btn-success"
         >
           Export Excel
